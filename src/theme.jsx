@@ -19,15 +19,8 @@ const theme = createTheme({
     },
   },
   typography: {
-    fontFamily: '"Taviraj", serif',
-
-    h1: {
-      fontWeight: 800,
-    },
-
-    body1: {
-      fontWeight: 200,
-    },
+    fontFamily: '"Cutive Mono", monospace',
+    fontWeight: 400,
   },
 });
 export default theme;

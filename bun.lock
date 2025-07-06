@@ -6,6 +6,8 @@
       "dependencies": {
         "@emotion/react": "^11.14.0",
         "@emotion/styled": "^11.14.1",
+        "@fontsource/cutive": "^5.2.6",
+        "@fontsource/cutive-mono": "^5.2.6",
         "@fontsource/taviraj": "^5.2.6",
         "@mui/material": "^7.2.0",
         "react": "^19.1.0",
@@ -161,6 +163,10 @@
     "@eslint/object-schema": ["@eslint/object-schema@2.1.6", "", {}, "sha512-RBMg5FRL0I0gs51M/guSAj5/e14VQ4tpZnQNWwuDT66P14I43ItmPfIZRhO9fUVIPOAQXU47atlywZ/czoqFPA=="],
 
     "@eslint/plugin-kit": ["@eslint/plugin-kit@0.3.3", "", { "dependencies": { "@eslint/core": "^0.15.1", "levn": "^0.4.1" } }, "sha512-1+WqvgNMhmlAambTvT3KPtCl/Ibr68VldY2XY40SL1CE0ZXiakFR/cbTspaF5HsnpDMvcYYoJHfl4980NBjGag=="],
+
+    "@fontsource/cutive": ["@fontsource/cutive@5.2.6", "", {}, "sha512-4E+jDSf8hHTECMxxn/NFUUKRD2KumHtBtdaIPgVwng2IAQZ2o8ChirUpGt+ZmAdHUeC4HC4R7RC3DqO9bvw+KA=="],
+
+    "@fontsource/cutive-mono": ["@fontsource/cutive-mono@5.2.6", "", {}, "sha512-d5Y5PlNvR1Om7dZ4L5FUAVQUcvjTqXkRUIqovBHxvLTRHgBDwq6QD6mt8PFGZM7ecRwB3fOyeq/eSjOWD/oAzA=="],
 
     "@fontsource/taviraj": ["@fontsource/taviraj@5.2.6", "", {}, "sha512-yIerO57WrebupU6e91U+UbKKfgPjzXE3CnLKhs0IG+cMVKY6I6DtxjWORXubvlk5TEMa6IzZpJLpuB3m9G3DrQ=="],
 
