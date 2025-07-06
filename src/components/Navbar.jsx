@@ -25,16 +25,17 @@ function Navbar() {
           to={item.href}
           color='inherit'
           sx={{
-            color: 'primary.main',
+            color: 'background.default',
             textTransform: 'none',
+            position: 'relative',
               '&::after': {
                 content: '""',
                 position: 'absolute',
                 bottom: 0,
                 left: 0,
                 width: '0%',
-                height: '2px',
-                backgroundColor: 'primary.main',
+                height: '3px',
+                backgroundColor: 'background.default',
                 transition: 'width 0.1s ease-in-out',
               },
               '&:hover::after': {
@@ -58,13 +59,12 @@ function Navbar() {
       <AppBar 
         position="static"
         sx={{
-          backgroundColor: 'transparent',
-          boxShadow: 'none'
+          backgroundColor: 'primary.main',
+          boxShadow: 'none',
         }}
       >
         <Toolbar sx={{ 
           justifyContent: 'flex-end',
-          backgroundColor: 'primary.main',
         }}>
           <Box>
             {renderNavigationButtons()}
