@@ -1,4 +1,5 @@
 import { createTheme } from '@mui/material/styles';
+import '@fontsource/cutive'
 
 const theme = createTheme({
   palette: {
@@ -19,7 +20,7 @@ const theme = createTheme({
     },
   },
   typography: {
-    fontFamily: '"Cutive Mono", monospace',
+    fontFamily: '"Cutive", serif',
     fontWeight: 400,
   },
 });
