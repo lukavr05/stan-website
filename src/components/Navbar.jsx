@@ -11,8 +11,9 @@ import {
 function Navbar() {
   const navigationItems = [
     { id: 'about', label: 'about', href: '/about' },
-    { id: 'events', label: 'events', href: '/events' },
-    { id: 'media', label: 'media', href: '/media' },
+    { id: 'projects', label: 'projects', href: '/projects'},
+    { id: 'services', label: 'services', href: '/services' },
+    { id: 'contact', label: 'contact', href: '/contact' },
   ];
 
   const renderNavigationButtons = () => (
@@ -25,10 +26,26 @@ function Navbar() {
           color='inherit'
           sx={{
             color: 'primary.main',
-            textTransform: 'none'
+            textTransform: 'none',
+              '&::after': {
+                content: '""',
+                position: 'absolute',
+                bottom: 0,
+                left: 0,
+                width: '0%',
+                height: '2px',
+                backgroundColor: 'primary.main',
+                transition: 'width 0.1s ease-in-out',
+              },
+              '&:hover::after': {
+                width: '100%',
+              },
+              '&:hover': {
+                backgroundColor: 'transparent',
+            }
           }}
         >
-          <Typography variant='h4'>
+          <Typography variant='h5'>
             {item.label}
           </Typography>
         </Button>
@@ -45,14 +62,12 @@ function Navbar() {
           boxShadow: 'none'
         }}
       >
-        <Toolbar sx={{ justifyContent: 'flex-end' }}>
-          <Box 
-            elevation={2}
-            sx={{
-          }}>
-            <Box sx={{}}>
-              {renderNavigationButtons()}
-            </Box>
+        <Toolbar sx={{ 
+          justifyContent: 'flex-end',
+          backgroundColor: 'primary.main',
+        }}>
+          <Box>
+            {renderNavigationButtons()}
           </Box>
         </Toolbar>
       </AppBar>
