@@ -25,6 +25,7 @@ function Navbar() {
           to={item.href}
           color='inherit'
           sx={{
+            height: 34,
             color: 'background.default',
             textTransform: 'none',
             position: 'relative',
@@ -36,7 +37,7 @@ function Navbar() {
                 width: '0%',
                 height: '3px',
                 backgroundColor: 'background.default',
-                transition: 'width 0.1s ease-in-out',
+                transition: 'width 0.15s ease-in-out',
               },
               '&:hover::after': {
                 width: '100%',
