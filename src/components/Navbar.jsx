@@ -35,7 +35,7 @@ function Navbar() {
                 bottom: 0,
                 left: 0,
                 width: '0%',
-                height: '3px',
+                height: '2px',
                 backgroundColor: 'background.default',
                 transition: 'width 0.15s ease-in-out',
               },
@@ -57,21 +57,38 @@ function Navbar() {
   
   return (
     <>
-      <AppBar 
-        position="static"
+
+      <Box
         sx={{
+          height: 10, 
+          backgroundColor: 'secondary.main',
+          clipPath: 'polygon(0 0, 100% 0, 100% 85%, 0 100%)',          
+          marginTop: -0.5,
+        }}
+      />
+      <Box
+        sx={{
+          position: 'relative',
           backgroundColor: 'primary.main',
-          boxShadow: 'none',
+          clipPath: 'polygon(0 0, 100% 0, 100% 85%, 0 100%)',
         }}
       >
-        <Toolbar sx={{ 
-          justifyContent: 'flex-end',
-        }}>
-          <Box>
-            {renderNavigationButtons()}
-          </Box>
-        </Toolbar>
-      </AppBar>
+        <AppBar 
+          position="static"
+          sx={{
+            backgroundColor: 'primary.main',
+            boxShadow: 'none',
+          }}
+        >
+          <Toolbar sx={{ 
+            justifyContent: 'flex-end',
+          }}>
+            <Box>
+              {renderNavigationButtons()}
+            </Box>
+          </Toolbar>
+        </AppBar>
+      </Box>
     </>
   )
 }
