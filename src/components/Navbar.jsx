@@ -4,9 +4,9 @@ import {
   Toolbar,
   Typography,
   Button,
-  Box,
-  Link
+  Box
 } from '@mui/material'
+import { Link } from 'react-router-dom'
 
 function Navbar() {
   const navigationItems = [
