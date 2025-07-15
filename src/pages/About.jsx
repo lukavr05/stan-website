@@ -1,4 +1,4 @@
-import { Box, Typography } from "@mui/material";
+import { Box, Typography, Link } from "@mui/material";
 
 
 function About() {
@@ -66,11 +66,8 @@ consistent focus on delivering exceptional results.
             paddingBottom: 4
           }}
         >
-          Notable highlights in my career to date include directing the Studio Lounge livestream series
-(viewable on youtube here), managing production for True Feel, an independent festival held in
-Guildford’s Electric Theatre, and serving as a sound assistant and runner for the Isle of Wight
-Festival 2024 broadcast. Each of these roles has strengthened my ability to work under
-pressure, communicate effectively, and maintain a high standard of professionalism.
+          Notable highlights in my career to date include directing the <Link href="https://www.youtube.com/playlist?list=PLIwnNsTtZiwgz2rGloHmp_OBKKpjr7JVP" variant="body1">Studio Lounge Livestream Series </Link>
+          managing production for True Feel, an independent festival held in Guildford’s Electric Theatre, and serving as a sound assistant and runner for the Isle of Wight Festival 2024 broadcast. Each of these roles has strengthened my ability to work under pressure, communicate effectively, and maintain a high standard of professionalism.
         </Typography>
       </Box>
     </>
