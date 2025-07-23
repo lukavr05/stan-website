@@ -60,14 +60,6 @@ function Navbar() {
 
       <Box
         sx={{
-          height: 10, 
-          backgroundColor: 'secondary.main',
-          clipPath: 'polygon(0 0, 100% 0, 100% 85%, 0 100%)',          
-          marginTop: -0.5,
-        }}
-      />
-      <Box
-        sx={{
           position: 'relative',
           backgroundColor: 'primary.main',
           clipPath: 'polygon(0 0, 100% 0, 100% 85%, 0 100%)',
@@ -88,6 +80,15 @@ function Navbar() {
             </Box>
           </Toolbar>
         </AppBar>
+
+      <Box
+        sx={{
+          height: 10, 
+          backgroundColor: 'secondary.main',
+          clipPath: 'polygon(0 0, 100% 0%, 100% 85%, 0 100%)',
+          marginTop: -0.5,
+        }}
+      />
       </Box>
     </>
   )
