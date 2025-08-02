@@ -11,7 +11,7 @@ function Home() {
         }}
       >
         <Typography variant="h1">
-          Sample
+          Stanley Whiterod
         </Typography>
 
         <Typography variant="body1">

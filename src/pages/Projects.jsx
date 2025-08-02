@@ -42,29 +42,159 @@ function Projects() {
       title: "Studio Lounge Livestream Series",
       role: "Director & Technical Lead",
       description: "Throughout my career so far, I have worked across a diverse range of professional environments. At Studio Lounge, I was responsible for overseeing the entire weekly livestream process. This included liaising with senior faculty to secure facilities, recruiting and coordinating crew members, managing technical equipment orders, and supervising the rigging of staging and audio systems. I also directed the live broadcast itself, operating ATEM and OBS software, and maintained communication with performers to ensure they were prepared and comfortable, along with directing the camera operators and the audio engineer",
-      hasVideo: true
+      hasVideo: true,
+      images: [
+        "/images/live-lounge-1.jpeg",
+      ]
     },
     {
       title: "True Feel Festival",
       role: "Production Manager",
-      description: "My role with True Feel required a focus on operational efficiency and stage management. I organised backstage areas, set up and patched equipment between sets, and collaborated closely with other crew members to deliver smooth transitions and uphold health and safety protocols, and keep the bands happy."
+      description: "My role with True Feel required a focus on operational efficiency and stage management. I organised backstage areas, set up and patched equipment between sets, and collaborated closely with other crew members to deliver smooth transitions and uphold health and safety protocols, and keep the bands happy.",
+      images: [
+        "/images/Untitled.jpeg",
+      ]
     },
     {
       title: "Isle of Wight Festival 2024",
       role: "Sound Assistant & Runner",
-      description: "During the Isle of Wight Festival 2024, I worked as an acoustic performance stage sound assistant and runner, where I was responsible for rigging monitors and microphones in coordination with the camera teams. I mixed monitor and PA sound, relayed signals to the outside broadcast unit for transmission checks, assisted with logistical tasks such as loading vehicles, and supported on-site staff with a variety of operational needs."
+      description: "During the Isle of Wight Festival 2024, I worked as an acoustic performance stage sound assistant and runner, where I was responsible for rigging monitors and microphones in coordination with the camera teams. I mixed monitor and PA sound, relayed signals to the outside broadcast unit for transmission checks, assisted with logistical tasks such as loading vehicles, and supported on-site staff with a variety of operational needs.",
+      images: [
+        "/images/iow-festival-1.jpeg",
+      ]
     },
     {
       title: "Broadcast Experience",
       role: "Sound Shadow & Technical Assistant",
-      description: "I have also gained valuable broadcast experience as a sound shadow with Vivid Broadcast, working on high-profile football coverage at QPR and Southampton. In this capacity, I rigged, monitored, and de-rigged pitch microphones, assisted with FACS checking, and contributed to maintaining broadcast continuity. With Tall Audio, I prepared and tested equipment, supported RF camera operations, and assisted with corporate productions requiring precise audio coordination."
+      description: "I have also gained valuable broadcast experience as a sound shadow with Vivid Broadcast, working on football coverage at QPR’s and Southampton’s Stadiums and on Cage Warriors UFC. In this capacity, I rigged, monitored, and de-rigged pitch microphones, assisted with FACS checking, and contributed to maintaining broadcast continuity. With Tall Audio, I prepared and tested equipment, supported RF camera operations, and assisted with corporate productions requiring precise audio coordination.",
+      images: [
+        "images/cage-warriors.jpeg",
+      ]
+    },
+    {
+      title: "Education",
+      role: "ACM",
+      description: "During my studies at ACM, I got hands on experience running productions at a verity of sizes. The smaller Electrical Nights were challenging, running multi-cam recording and also mixing audio for the front of house and recording at the same time. Recording the Masterclasses of Guitarists Ariel Posen and Greg Kotch were more experience working with OBS and the NDI PTZ birddog cameras, and the larger scale productions in the 180 person capacity theatre would use up to six cameras at once. We had a verity of artists performing, some other studentsand some stars, such as Chase & Status’ drummer, Andy Gangadeen, and Muse’s bassist Chris Wolstenholme.",
+      images: [
+        "images/broadcast-exp-1.jpeg",
+        "images/chris.jpeg"
+      ]
     },
     {
       title: "Client Service Experience",
       role: "Customer Relations",
-      description: "In addition to my production work, I held a customer-facing role with Lindon Lewis Marine, where I developed skills in client service, stock management, and order processing. This experience reinforced my ability to maintain high standards of organisation and professionalism across any working environment."
+      description: "In addition to my production work, I held a customer-facing role with Lindon Lewis Marine, where I developed skills in client service, stock management, and order processing. This experience reinforced my ability to maintain high standards of organisation and professionalism across any working environment.",
+      images: [
+      ]
     }
   ];
+
+  const renderMedia = (project, index) => {
+    if (!project.images && !project.hasVideo) return null;
+
+    return (
+      <Box>
+        {/* Video section (for Studio Lounge) */}
+        {project.hasVideo && (
+          <Box
+            sx={{
+              width: "100%",
+              display: "flex",
+              justifyContent: "center",
+              marginBottom: project.images ? 2 : 0,
+            }}
+          >
+            <Box
+              sx={{
+                position: 'relative',
+                borderRadius: '12px',
+                overflow: 'hidden',
+                boxShadow: '0 8px 32px rgba(83, 113, 111, 0.3)',
+                transition: 'all 0.3s ease',
+                width: '100%',
+                aspectRatio: '16/9',
+                '&:hover': {
+                  transform: 'scale(1.02)',
+                  boxShadow: '0 12px 40px rgba(83, 113, 111, 0.4)',
+                },
+                '& iframe': {
+                  width: '100%',
+                  height: '100%',
+                  borderRadius: '12px'
+                }
+              }}
+            >
+              <iframe 
+                src="https://www.youtube.com/embed/tOdQSxWDTDI?si=tFiIQdJNqghKtwrN" 
+                title="YouTube video player" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                referrerPolicy="strict-origin-when-cross-origin" 
+                allowFullScreen
+              />
+            </Box>
+          </Box>
+        )}
+
+        {/* Images section */}
+        {project.images && project.images.length > 0 && (
+          <Box>
+            {project.images.length === 1 ? (
+              // Single image layout
+              <Box
+                component="img"
+                src={project.images[0]}
+                alt={`${project.title} - Image`}
+                sx={{
+                  width: '100%',
+                  maxHeight: '300px',
+                  borderRadius: '12px',
+                  boxShadow: '0 8px 32px rgba(83, 113, 111, 0.3)',
+                  transition: 'all 0.3s ease',
+                  objectFit: 'cover',
+                  '&:hover': {
+                    transform: 'scale(1.02)',
+                    boxShadow: '0 12px 40px rgba(83, 113, 111, 0.4)',
+                  }
+                }}
+              />
+            ) : (
+              // Multiple images layout - stacked vertically in sidebar
+              <Box
+                sx={{
+                  display: 'flex',
+                  flexDirection: 'column',
+                  gap: 1.5,
+                  width: '100%',
+                }}
+              >
+                {project.images.map((image, imgIndex) => (
+                  <Box
+                    key={imgIndex}
+                    component="img"
+                    src={image}
+                    alt={`${project.title} - Image ${imgIndex + 1}`}
+                    sx={{
+                      width: '100%',
+                      height: '140px',
+                      borderRadius: '8px',
+                      boxShadow: '0 4px 16px rgba(83, 113, 111, 0.2)',
+                      transition: 'all 0.3s ease',
+                      objectFit: 'cover',
+                      cursor: 'pointer',
+                      '&:hover': {
+                        transform: 'translateY(-2px)',
+                        boxShadow: '0 8px 24px rgba(83, 113, 111, 0.3)',
+                      }
+                    }}
+                  />
+                ))}
+              </Box>
+            )}
+          </Box>
+        )}
+      </Box>
+    );
+  };
 
   return (
     <>
@@ -133,80 +263,54 @@ function Projects() {
                     }
                   }}
                 >
-                  {index === 0 && (
-                    <Box
-                      sx={{
-                        position: 'absolute',
-                        top: 20,
-                        right: 20,
-                        fontSize: '28px',
-                        opacity: 0.7,
-                      }}
-                    >
-                    </Box>
-                  )}
-                  
-                  <Typography 
-                    variant="h5" 
-                    sx={{ 
-                      marginBottom: 1, 
-                      color: '#233623',
-                      fontWeight: 500 
+                  <Box
+                    sx={{
+                      display: 'flex',
+                      flexDirection: { xs: 'column', md: 'row' },
+                      gap: 3,
+                      alignItems: 'flex-start'
                     }}
                   >
-                    {project.title}
-                  </Typography>
-                  <Typography 
-                    variant="subtitle2" 
-                    sx={{ 
-                      marginBottom: 2, 
-                      color: '#53716F',
-                      fontStyle: 'italic',
-                      opacity: 0.8
-                    }}
-                  >
-                    {project.role}
-                  </Typography>
-                  <Typography variant="body1" sx={{ marginBottom: project.hasVideo ? 3 : 0 }}>
-                    {project.description}
-                  </Typography>
-
-                  {/* Video for first project only */}
-                  {project.hasVideo && (
-                    <Box
-                      sx={{
-                        width: "100%",
-                        display: "flex",
-                        justifyContent: "center",
-                        paddingTop: 2,
-                      }}
-                    >
-                      <Box
-                        sx={{
-                          position: 'relative',
-                          borderRadius: '12px',
-                          overflow: 'hidden',
-                          boxShadow: '0 8px 32px rgba(83, 113, 111, 0.3)',
-                          transition: 'all 0.3s ease',
-                          '&:hover': {
-                            transform: 'scale(1.02)',
-                            boxShadow: '0 12px 40px rgba(83, 113, 111, 0.4)',
-                          }
+                    {/* Text Content */}
+                    <Box sx={{ flex: 1, minWidth: 0 }}>
+                      <Typography 
+                        variant="h5" 
+                        sx={{ 
+                          marginBottom: 1, 
+                          color: '#233623',
+                          fontWeight: 500 
                         }}
                       >
-                        <iframe 
-                          width="560" 
-                          height="315" 
-                          src="https://www.youtube.com/embed/tOdQSxWDTDI?si=tFiIQdJNqghKtwrN" 
-                          title="YouTube video player" 
-                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                          referrerPolicy="strict-origin-when-cross-origin" 
-                          allowFullScreen
-                          style={{ borderRadius: '12px' }}
-                        />
-                      </Box>
+                        {project.title}
+                      </Typography>
+                      <Typography 
+                        variant="subtitle2" 
+                        sx={{ 
+                          marginBottom: 2, 
+                          color: '#53716F',
+                          fontStyle: 'italic',
+                          opacity: 0.8
+                        }}
+                      >
+                        {project.role}
+                      </Typography>
+                      <Typography variant="body1">
+                        {project.description}
+                      </Typography>
                     </Box>
-                  )}
+
+                    {/* Media Content */}
+                    {(project.images || project.hasVideo) && (
+                      <Box 
+                        sx={{ 
+                          flex: { xs: 1, md: '0 0 40%' },
+                          maxWidth: { xs: '100%', md: '40%' }
+                        }}
+                      >
+                        {renderMedia(project, index)}
+                      </Box>
+                    )}
+                  </Box>
                 </Paper>
               </Slide>
             </div>

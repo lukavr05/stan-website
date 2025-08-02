@@ -40,31 +40,27 @@ function About() {
   const sections = [
     {
       title: "Education & Background",
-      content: "I am currently completing a degree in Live Production and Technical Arts at the Academy of Contemporary Music, where I have combined rigorous academic study with extensive practical experience in live events, broadcast, and studio production. My background also includes studies in Business, Music Production, and 3D Design, providing a strong foundation in both operational and creative disciplines."
+      content: "As of August 2025, I will have a degree in Live Production and Technical Arts from the Academy of Contemporary Music, where I have combined academic study with extensive practical experience in live events, broadcast, and studio production. My background also includes studies in Business, Music Production, and 3D Design, providing a strong foundation in both operational and creative disciplines.",    
     },
     {
       title: "Skills & Expertise", 
-      content: "I specialise in audio, visual, and full-scale production management. My experience includes rigging staging, patching and mixing live sound, configuring ATEM and OBS systems for livestreaming, and coordinating technical teams to ensure events run efficiently.",
+      content:"I specialise in audio, visual, and full-scale production management. My experience includes rigging cameras, microphones, amplifiers, drumkits and staging, patching and mixing live sound, configuring DANTE, ATEM, NDI and OBS systems for livestreaming, and coordinating technical teams to ensure events run efficiently. I am proficient with a wide range of software platforms, including iWork, Google Workspace, and Office 365, and I am confident in my ability to adapt to any digital environment or equipment provided.",
       skills: [
         'Live Sound Mixing', 
         'ATEM Systems', 
         'OBS Studio', 
         'Production Management',
-        'iWork', 
-        'Google Workspace', 
+        'DANTE', 
+        'NTI', 
+        'Team Coordination',
+        'iWork',
         'Office 365',
-        'Team Coordination'
       ]
     },
     {
       title: "Professional Recognition",
-      content: "Colleagues and supervisors have described my approach as reliable and proactive. Paul Stadden, owner of Tall Audio observed, BLANK. Rory, owner of Vivid Broadcast referred to me as BLANK while Matt Russell, Live Production and Technical Arts lecturer at ACM described me simply as BLANK."
+      content: "Colleagues and supervisors have described my approach as reliable and proactive. Paul Stadden, co-founder of Tall Audio Sound Services, an independent broadcast sound company “Stanley's attention to detail, dedication to high quality production and open minded attitude to collaboration makes him a core member of any crew and a joy to work with” Matt Russel, founder of Cato Music, tour manager for Muse/Coldplay/more and Senior Live Production and Technical Arts lecturer at ACM"
     },
-    {
-      title: "Career Highlights",
-      content: "Notable highlights in my career to date include directing the Studio Lounge Livestream Series, managing production for True Feel (an independent festival held in Guildford's Electric Theatre), and serving as a sound assistant and runner for the Isle of Wight Festival 2024 broadcast. Each of these roles has strengthened my ability to work under pressure, communicate effectively, and maintain a high standard of professionalism.",
-      hasLink: true
-    }
   ];
 
   return (
