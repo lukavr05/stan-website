@@ -10,9 +10,9 @@ import { Link } from 'react-router-dom'
 
 function Navbar() {
   const navigationItems = [
+    { id: 'home', label: 'home', href: '/' },
     { id: 'about', label: 'about', href: '/about' },
     { id: 'projects', label: 'projects', href: '/projects'},
-    { id: 'services', label: 'services', href: '/services' },
     { id: 'contact', label: 'contact', href: '/contact' },
   ];
 
