@@ -15,6 +15,7 @@
     "@fontsource/cutive": "^5.2.6",
     "@fontsource/cutive-mono": "^5.2.6",
     "@fontsource/taviraj": "^5.2.6",
+    "@mui/icons-material": "^7.2.0",
     "@mui/material": "^7.2.0",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",

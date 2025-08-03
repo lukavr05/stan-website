@@ -8,13 +8,13 @@ import {
   Divider,
   useTheme
 } from "@mui/material";
+import { 
+  Email as EmailIcon,
+  Phone as PhoneIcon,
+  LinkedIn as LinkedInIcon,
+  Instagram as InstagramIcon
+} from "@mui/icons-material";
 import { useState, useEffect, useRef } from "react";
-
-// You'll need to install lucide-react or use Material-UI icons
-// For now, I'll use simple text indicators
-const EmailIcon = () => "✉";
-const PhoneIcon = () => "📞";
-const LinkedInIcon = () => "💼";
 
 function Contact() {
   const [visible, setVisible] = useState(false);
@@ -55,24 +55,31 @@ function Contact() {
 
   const contactMethods = [
     {
-      icon: EmailIcon(),
+      icon: <EmailIcon />,
       title: "Email",
-      value: "stanley@whiterod.co.uk", // Replace with your actual email
+      value: "stanley@whiterod.co.uk",
       link: "mailto:stanley@whiterod.co.uk",
       description: ""
     },
     {
-      icon: PhoneIcon(),
+      icon: <PhoneIcon />,
       title: "Phone",
-      value: "+44 7342 924404", // Replace with your actual phone number
+      value: "+44 7342 924404",
       link: "tel:+447342924404",
       description: ""
     },
     {
-      icon: LinkedInIcon(),
+      icon: <LinkedInIcon />,
       title: "LinkedIn",
-      value: "", // Replace with your actual LinkedIn
+      value: "",
       link: "https://www.linkedin.com/in/stanley-whiterod-a17b70363/?trk=opento_sprofile_pfeditor",
+      description: ""
+    },
+    {
+      icon: <InstagramIcon />,
+      title: "Instagram",
+      value: "", // Replace with your actual Instagram handle
+      link: "https://www.instagram.com/garlicbread1869", // Replace with your actual Instagram URL
       description: ""
     }
   ];
@@ -117,7 +124,7 @@ function Contact() {
       <Box
         sx={{
           display: 'grid',
-          gridTemplateColumns: { xs: '1fr', md: 'repeat(3, 1fr)' },
+          gridTemplateColumns: { xs: '1fr', sm: 'repeat(2, 1fr)', lg: 'repeat(4, 1fr)' },
           gap: 4,
           marginBottom: 8,
         }}
@@ -166,17 +173,22 @@ function Contact() {
                   color="inherit"
                 >
                   <Box>
-                    <Typography
+                    <Box
                       className="contact-icon"
                       sx={{
                         fontSize: '3rem',
                         marginBottom: 2,
-                        display: 'block',
+                        display: 'flex',
+                        justifyContent: 'center',
                         transition: 'transform 0.3s ease',
+                        color: '#53716F',
+                        '& > svg': {
+                          fontSize: '3rem',
+                        }
                       }}
                     >
                       {method.icon}
-                    </Typography>
+                    </Box>
                     
                     <Typography 
                       variant="h5" 
